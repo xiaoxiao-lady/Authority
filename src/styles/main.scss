@@ -1,0 +1,28 @@
+.main-container {
+  height: 100%;
+  transition: margin-left 0.28s;
+  margin-left: $sidebarWidth;
+  position: relative;
+  overflow: hidden;
+}
+// 屏幕宽度<=移动设备宽度 样式
+.mobile {
+  //屏幕
+  //屏幕宽度<=移动设备宽度 && 菜单栏隐藏 样式
+  .main-container{
+    margin-left: 0 !important;
+  }
+}
+// 菜单栏隐藏 样式
+.hideSidebar {
+  .main-container {
+    margin-left: $sidebarCollapseWidth;
+  }
+}
+
+//附带动画 样式
+.withoutAnimation{
+  .main-container{
+    transition: none;
+  }
+}

@@ -1,0 +1,40 @@
+/*
+ * @description: 全局样式变量
+ */
+$sidebarWidth: 210px;
+$sidebarCollapseWidth: 54px;
+
+$logoHeight: 50px;
+
+$navbarHeight: 50px;
+
+$tagsHeight: 34px;
+$tagsWrapHeight: 50px;
+$tagsItemHeight: 26px;
+
+$menuBg: #304156;
+$menuText: #bfcbd9;
+$menuHover: #263445;
+$menuActiveText: #409eff;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+$subMenuActiveText: #f4f4f5;
+
+$txtColor: red;
+
+:export {
+  sidebarWidth: $sidebarWidth;
+
+  logoHeight: $logoHeight;
+
+  menuBg: $menuBg;
+  menuText: $menuText;
+  menuHover: $menuHover;
+  menuActiveText: $menuActiveText;
+
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  subMenuActiveText: $subMenuActiveText;
+  navbarHeight: $navbarHeight;
+}

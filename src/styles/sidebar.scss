@@ -1,0 +1,168 @@
+.sidebar-container {
+  transition: width 0.28s;
+  width: $sidebarWidth !important;
+  background-color: $menuBg;
+  height: 100%;
+  position: fixed;
+  font-size: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  //滚动条高度
+  .el-scrollbar {
+    height: 100%;
+  }
+  // icon 样式
+  .svg-icon {
+    margin-right: 16px;
+  }
+  .sub-el-icon {
+    margin-right: 12px;
+    margin-left: -2px;
+  }
+  // 菜单栏容器样式
+  .el-menu {
+    border: none;
+    height: 100%;
+    width: 100% !important;
+  }
+  // 无子级菜单样式
+  .submenuNoNest,
+  .el-submenu__title {
+    &:hover {
+      background-color: $menuHover !important;
+    }
+  }
+  // 有子级菜单样式
+  .submenuNest .el-submenu > .el-submenu__title,
+  .el-submenu .el-menu-item {
+    background-color: $subMenuBg !important;
+    &:hover {
+      background-color: $subMenuHover !important;
+    }
+  }
+  // 激活菜单的文字颜色
+  .is-active > .el-submenu__title {
+    color: $subMenuActiveText !important;
+  }
+  // 收缩菜单栏时的过渡样式
+  .horizontal-collapse-transition {
+    transition: 0s width ease-in-out, 0s padding-left ease-in-out,
+      0s padding-right ease-in-out;
+  }
+}
+.hasLogo{
+  .el-scrollbar {
+    height: calc(100% - #{$logoHeight});
+  }
+}
+
+// 菜单栏收缩 样式
+.el-menu--vertical {
+  & > .el-menu {
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .sub-el-icon {
+      margin-right: 12px;
+      margin-left: -2px;
+    }
+  }
+  .submenuNest .el-submenu > .el-submenu__title,
+  .el-menu-item {
+    &:hover {
+      background-color: $subMenuHover !important;
+    }
+  }
+  > .el-menu--popup {
+    max-height: 100vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track-piece {
+      background: #d3dce6;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #99a9bf;
+      border-radius: 20px;
+    }
+  }
+}
+
+// 屏幕宽度<=移动设备宽度 样式
+.mobile {
+  //菜单栏容器样式
+  .sidebar-container {
+    transition: transform 0.28s;
+    width: $sidebarWidth !important;
+  }
+  //屏幕宽度<=移动设备宽度 && 菜单栏隐藏 样式
+  &.hideSidebar {
+    .sidebar-container {
+      pointer-events: none;
+      transition-duration: 0.3s;
+      transform: translate3d(-$sidebarWidth, 0, 0);
+    }
+  }
+}
+
+// 菜单栏隐藏 样式
+.hideSidebar {
+  .sidebar-container {
+    width: $sidebarCollapseWidth !important;
+  }
+  .submenuNoNest {
+    position: relative;
+    .el-tooltip {
+      padding: 0 !important;
+      position: relative;
+      .svg-icon {
+        margin-left: 20px;
+      }
+      .sub-el-icon {
+        margin-left: 19px;
+      }
+    }
+  }
+  .el-submenu {
+    overflow: hidden;
+    & > .el-submenu__title {
+      padding: 0 !important;
+      .svg-icon {
+        margin-left: 20px;
+      }
+      .sub-el-icon {
+        margin-left: 19px;
+      }
+      .el-submenu__icon-arrow {
+        display: none;
+      }
+    }
+  }
+  .el-menu--collapse {
+    .el-submenu {
+      & > .el-submenu__title {
+        & > span {
+          height: 0;
+          width: 0;
+          overflow: hidden;
+          visibility: hidden;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+//附带动画 样式
+.withoutAnimation {
+  .sidebar-container {
+    transition: none;
+  }
+}

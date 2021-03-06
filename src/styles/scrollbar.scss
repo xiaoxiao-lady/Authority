@@ -1,0 +1,20 @@
+.sidebarScroll{
+  height:100%;
+  .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+  }
+  .el-scrollbar__view{
+    overflow-x: hidden !important;
+  }
+}
+
+
+.dashboardScroll{
+  height:100%;
+  .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+  }
+  .el-scrollbar__view{
+    overflow-x: hidden !important;
+  }
+}

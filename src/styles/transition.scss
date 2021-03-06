@@ -1,0 +1,46 @@
+/*
+ * @description: 菜单栏 Logo 显示与与隐藏过渡
+ */
+.siderbarLogoFade-enter-active {
+  transition: opacity 1.5s;
+}
+.siderbarLogoFade-enter,
+.siderbarLogoFade-leave-to {
+  opacity: 0;
+}
+/*
+ * @description: 视图页面显示与隐藏过渡
+ */
+.appFade-leave-active,
+.appFade-enter-active {
+  transition: all 0.5s;
+}
+
+.appFade-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.appFade-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/*
+ * @description: 面包屑过渡
+ */
+.breadcrumbFade-enter-active,
+.breadcrumbFade-leave-active {
+  transition: all 0.8s;
+}
+.breadcrumbFade-enter,
+.breadcrumbFade-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.breadcrumbFade-move {
+  transition: all 0.8s;
+}
+.breadcrumbFade-leave-active {
+  position: absolute;
+}

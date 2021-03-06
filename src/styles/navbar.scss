@@ -1,0 +1,96 @@
+.navbar {
+  height: $navbarHeight;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  .hamburger {
+    width: $navbarHeight;
+    height: $navbarHeight;
+    line-height: $navbarHeight;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    transition: background 0.3s;
+    &:hover {
+      background: rgba(0, 0, 0, 0.025);
+    }
+  }
+  .breadcrumb {
+    &.el-breadcrumb {
+      display: inline-block;
+      font-size: 14px;
+      line-height: $navbarHeight;
+      margin-left: 8px;
+    }
+    .no-redirect {
+      color: #97a8be;
+      cursor: text;
+    }
+  }
+  .menu {
+    float: right;
+    height: $navbarHeight;
+    line-height: $navbarHeight;
+    &:focus {
+      outline: none;
+    }
+    /*
+     * @description: 搜索组件样式
+     */
+    .search {
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 18px;
+      color: #5a5e66;
+      vertical-align: text-bottom;
+      .search-icon {
+        cursor: pointer;
+        font-size: 18px;
+        vertical-align: middle;
+      }
+      .select {
+        font-size: 18px;
+        transition: width 0.2s;
+        width: 0;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .showSelect {
+      .select {
+        width: 210px;
+        margin-left: 10px;
+      }
+    }
+    /*
+     * @description: 头像组件样式
+     */
+    .avatar {
+      display: inline-block;
+      padding: 0 8px;
+      height: $navbarHeight;
+      line-height: $navbarHeight;
+      font-size: 18px;
+      color: #5a5e66;
+      vertical-align: text-bottom;
+      margin-right: 30px;
+      .img {
+        height: 100%;
+        img {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          vertical-align: middle;
+          margin-right: 8px;
+        }
+        .down-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

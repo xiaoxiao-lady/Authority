@@ -1,0 +1,11 @@
+//标签栏隐藏 样式
+.views {
+  width: 100%;
+  height: calc(100% - #{$navbarHeight});
+}
+// 标签栏显示 样式
+.hasTagsView {
+  .views {
+    height: calc(100% - #{$navbarHeight} - #{$tagsHeight});
+  }
+}
